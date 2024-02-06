@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./App.css";
 
 function useGeolocation() {}
 
@@ -33,7 +34,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className="box">
       <button onClick={getPosition} disabled={isLoading}>
         Get my position
       </button>
@@ -53,7 +54,10 @@ export default function App() {
         </p>
       )}
 
-      <p>You requested position {countClicks} times</p>
+      <p>
+        You requested position
+        <strong> {countClicks}</strong> times
+      </p>
     </div>
   );
 }
